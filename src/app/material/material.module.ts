@@ -7,6 +7,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [],
@@ -18,7 +20,9 @@ import { MatCardModule } from '@angular/material/card';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    MatSidenavModule
   ],
   exports: [
     MatButtonModule,
@@ -28,7 +32,9 @@ import { MatCardModule } from '@angular/material/card';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCheckboxModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule,
+    MatSidenavModule
   ]
 })
 export class MaterialModule { }
