@@ -1,9 +1,12 @@
 <mat-toolbar color="primary"> 
  <div> <button mat-icon-button (click)="toggleSidenav()"><mat-icon>menu</mat-icon></button> </div>
  <div>FITNESS TRACKER</div>
- <div>
-   <a routerLink="/signup">Signup</a>
-   <a routerLink="/login">Login</a>
-   <a routerLink="/training">Training</a>
- </div>
+ <!-- <div fkFlex></div> -->
+ <div fxFlex fxLayoutAlign="flex-end">
+   <ul fxLayout class="navigation-items" fxLayoutGap="10px">
+     <li><a routerLink="/signup">Signup</a></li>
+     <li><a routerLink="/login">Login</a></li>
+     <li><a routerLink="/training">Training</a></li>
+   </ul>
+  </div>
 </mat-toolbar>
