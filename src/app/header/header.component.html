@@ -1,8 +1,8 @@
-<mat-toolbar color="primary"> 
- <div> <button mat-icon-button (click)="toggleSidenav()"><mat-icon>menu</mat-icon></button> </div>
+<mat-toolbar color="primary" fxFlex> 
+ <div> <button mat-icon-button (click)="toggleSidenav()"  fxHide.gt-xs ><mat-icon>menu</mat-icon></button> </div>
  <div>FITNESS TRACKER</div>
  <!-- <div fkFlex></div> -->
- <div fxFlex fxLayoutAlign="flex-end">
+ <div fxFlex fxLayoutAlign="flex-end" fxHide.lt-sm>
    <ul fxLayout class="navigation-items" fxLayoutGap="10px">
      <li><a routerLink="/signup">Signup</a></li>
      <li><a routerLink="/login">Login</a></li>
