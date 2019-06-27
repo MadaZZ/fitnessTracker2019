@@ -1,3 +1,7 @@
 a{
     text-decoration: none;
 }
+
+.nav-item{
+    padding-left: 5px;
+}

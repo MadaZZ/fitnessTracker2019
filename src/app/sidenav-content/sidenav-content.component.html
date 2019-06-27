@@ -1,5 +1,15 @@
-<mat-list role="list">
-  <a mat-list-item routerLink="/signup"><mat-icon>face</mat-icon> Signup </a>
-  <a mat-list-item routerLink="/login">Login</a>
-  <a mat-list-item routerLink="/training">Training</a>
-</mat-list>
+<mat-nav-list role="list" (click)="toggleSidenav()">
+  <a mat-list-item routerLink="/signup">
+    <mat-icon>face</mat-icon> 
+    <span class="nav-item"> Signup </span>
+  </a>
+  <a mat-list-item routerLink="/login">
+    <mat-icon>input</mat-icon>
+    <span class="nav-item"> Login </span>
+  </a>
+  <a mat-list-item routerLink="/training">
+    <mat-icon>fitness_center</mat-icon>
+    <span class="nav-item"> Training </span>
+  </a>
+  <button mat-icon-button></button>
+</mat-nav-list>
