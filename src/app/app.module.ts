@@ -15,6 +15,7 @@ import { PastTrainingComponent } from './training/past-training/past-training.co
 import { AppRoutingModule } from './app-routing.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './header/header.component';
+import { SidenavContentComponent } from './sidenav-content/sidenav-content.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HeaderComponent } from './header/header.component';
     CurrentTrainingComponent,
     NewTrainingComponent,
     PastTrainingComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidenavContentComponent
   ],
   imports: [
     BrowserModule,
