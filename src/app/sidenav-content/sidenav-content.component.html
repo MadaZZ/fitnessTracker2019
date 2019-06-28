@@ -1,6 +1,6 @@
 <mat-nav-list role="list" (click)="toggleSidenav()">
   <a mat-list-item routerLink="/signup">
-    <mat-icon>face</mat-icon> 
+    <mat-icon>face</mat-icon>
     <span class="nav-item"> Signup </span>
   </a>
   <a mat-list-item routerLink="/login">
@@ -11,5 +11,10 @@
     <mat-icon>fitness_center</mat-icon>
     <span class="nav-item"> Training </span>
   </a>
-  <button mat-icon-button></button>
+  <mat-list-item>
+    <button mat-icon-button>
+      <mat-icon>eject</mat-icon>
+      <span class="nav-item"> Logout </span>
+    </button>
+  </mat-list-item>
 </mat-nav-list>
