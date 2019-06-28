@@ -6,7 +6,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./sidenav-content.component.css']
 })
 export class SidenavContentComponent implements OnInit {
-
+  
   @Output() toggle = new EventEmitter<void>();
   constructor() { }
 
