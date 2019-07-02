@@ -5,8 +5,8 @@
         <mat-form-field>
             <mat-label>Selet Training</mat-label>
             <mat-select>
-              <mat-option *ngFor="let training of trainings" [value]="training.calories">
-                {{training.name}}
+              <mat-option *ngFor="let exercise of exercises" [value]="exercises.calories">
+                {{exercise.name}}
               </mat-option>
             </mat-select>
           </mat-form-field>
