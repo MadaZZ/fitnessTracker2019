@@ -4,4 +4,4 @@
   </mat-tab>
   <mat-tab label="Past Exercise"> <app-past-training></app-past-training> </mat-tab>
 </mat-tab-group>
-<app-current-training (exerciseStopped)="onStartTraining()" *ngIf="ongoingTraining"></app-current-training>
+<app-current-training *ngIf="ongoingTraining"></app-current-training>
