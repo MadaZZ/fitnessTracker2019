@@ -5,7 +5,7 @@ import { Exercise } from './exercise.model';
   providedIn: 'root'
 })
 export class TrainingService {
-  availableExercise: Exercise[] = [
+  private availableExercise: Exercise[] = [
     { id: 'ex001' , name: 'Pushups', calories: 50, duration: 30 },
     { id: 'ex002' , name: 'Chinups', calories: 90, duration: 30 },
     { id: 'ex003' , name: 'Situps', calories: 70, duration: 30 },
@@ -13,7 +13,7 @@ export class TrainingService {
   ];
 
   getAvailableExercises() {
-    return this.availableExercise;
+    return this.availableExercise.slice(); // Returns a different array instance than the original
   }
 
 

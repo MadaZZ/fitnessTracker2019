@@ -19,6 +19,7 @@ import { SidenavContentComponent } from './sidenav-content/sidenav-content.compo
 import { StopTrainingComponent } from './training/current-training/stop-training.component';
 
 import { AuthService } from './auth/auth.service';
+import { TrainingService } from './training/training.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { AuthService } from './auth/auth.service';
     FormsModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    TrainingService
   ],
   bootstrap: [AppComponent],
   entryComponents: [StopTrainingComponent]
