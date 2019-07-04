@@ -27,4 +27,8 @@ export class TrainingService {
     }
   }
 
+  stopExercise() {
+    this.exerciseChanged.next(false);
+  }
+
 }
