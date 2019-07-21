@@ -20,6 +20,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
 
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
+import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TrainingService } from './training/training.service';
     PastTrainingComponent,
     HeaderComponent,
     SidenavContentComponent,
-    StopTrainingComponent
+    StopTrainingComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
