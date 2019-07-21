@@ -68,4 +68,9 @@ export class TrainingService {
   getFinishedExercises() {
     return this.doneExercises.slice();
   }
+
+  // Related to admin service
+  addExercise(exerciseToAdd: Exercise) {
+    this.availableExercise.push(exerciseToAdd);
+  }
 }

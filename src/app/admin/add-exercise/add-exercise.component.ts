@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Exercise } from '../../training/exercise.model';
+import { AdminService } from '../admin.service';
 
 @Component({
   selector: 'app-add-exercise',
@@ -9,7 +10,7 @@ import { Exercise } from '../../training/exercise.model';
 })
 export class AddExerciseComponent implements OnInit {
 
-  constructor() { }
+  constructor( private adminService: AdminService ) { }
 
   ngOnInit() {
   }
@@ -21,5 +22,6 @@ export class AddExerciseComponent implements OnInit {
       duration: form.value.duration,
       calories: form.value.calories,
     };
+    this.adminService.addExercise(exerciseToAdd);
   }
 }
