@@ -7,9 +7,13 @@
     <mat-icon>input</mat-icon>
     <span class="nav-item"> Login </span>
   </a>
-  <a mat-list-item *ngIf="isAuth" routerLink="/training">
+  <a mat-list-item *ngIf="isAuth && authType==='user'" routerLink="/training">
     <mat-icon>fitness_center</mat-icon>
     <span class="nav-item"> Training </span>
+  </a>
+  <a mat-list-item *ngIf="isAuth && authType==='admin'" routerLink="/admin">
+    <mat-icon>admin</mat-icon>
+    <span class="nav-item"> Admin </span>
   </a>
   <mat-list-item *ngIf="isAuth">
     <button mat-icon-button (click)="onLogout()">

@@ -10,13 +10,17 @@ import { Subscription } from 'rxjs/Subscription';
 export class SidenavContentComponent implements OnInit, OnDestroy {
   @Output() toggle = new EventEmitter<void>();
 
-  isAuth = false;
+  private isAuth = false;
+  private authType = null;
   authSubscription: Subscription;
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
     this.authSubscription = this.authService.authChange.subscribe( authStatus => {
       this.isAuth = authStatus;
+    });
+    this.authSubscription = this.authService.authType.subscribe( authType => {
+      this.authType = authType;
     });
   }
 
