@@ -21,6 +21,7 @@ import { StopTrainingComponent } from './training/current-training/stop-training
 import { AuthService } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { AdminComponent } from './admin/admin.component';
+import { AddExerciseComponent } from './admin/add-exercise/add-exercise.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AdminComponent } from './admin/admin.component';
     HeaderComponent,
     SidenavContentComponent,
     StopTrainingComponent,
-    AdminComponent
+    AdminComponent,
+    AddExerciseComponent
   ],
   imports: [
     BrowserModule,
