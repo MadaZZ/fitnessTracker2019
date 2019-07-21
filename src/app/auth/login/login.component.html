@@ -9,7 +9,7 @@
         </mat-form-field>
   
         <mat-form-field hintLabel="Should be atleast 6 characters long.">
-          <input type="password" matInput placeholder="Enter Password" ngModel name="EnterPassword" required minlength="6"
+          <input type="password" matInput placeholder="Enter Password" ngModel name="password" required minlength="6"
             #enterpw="ngModel">
           <mat-hint align="end"> {{enterpw.value?.length}} / 6 </mat-hint>
           <mat-error>Has to be atleast 6 chars</mat-error>
