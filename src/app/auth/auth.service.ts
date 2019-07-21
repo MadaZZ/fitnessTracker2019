@@ -10,7 +10,13 @@ import { Subject } from 'rxjs/Subject';
 })
 export class AuthService {
   authChange = new Subject<boolean>();
+  authType = new Subject<string>();
   private user: User;
+  private loginType: string;
+  private adminCred: AuthData = {
+    email: 'admin@training.com',
+    password: 'password'
+  };
 
   constructor( private router: Router ) {}
 
@@ -27,7 +33,12 @@ export class AuthService {
       email: authData.email,
       userId: Math.round(Math.random() * 100000).toString()
     };
-    this.authSuccessfuly();
+    if (this.user.email === this.adminCred.email && authData.password === this.adminCred.password) {
+      this.adminAuthSuccessful();
+    }
+    else {
+      this.authSuccessfuly();
+    }
   }
 
   logout() {
@@ -46,6 +57,13 @@ export class AuthService {
 
   authSuccessfuly() {
     this.authChange.next(true);
+    this.authType.next('user');
     this.router.navigate(['/training']);
+  }
+
+  adminAuthSuccessful() {
+    this.authChange.next(true);
+    this.authType.next('admin');
+    this.router.navigate(['/admin']);
   }
 }
