@@ -1,1 +1,24 @@
-add exercise works
+<section fxLayoutAlign="center">
+    <form #form="ngForm">
+        <mat-card fxFlex="400px">
+            <mat-card-title>Add Exercise</mat-card-title>
+            <mat-card-content fxLayout="column">
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" name="name" required ngModel>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Duration</mat-label>
+                    <input matInput type="number" name="duration" ngModel required>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Calories</mat-label>
+                    <input matInput type="number" name="calories" ngModel required>
+                </mat-form-field>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="addExercise(form)" [disabled]="form.invalid">Start</button>
+            </mat-card-actions>
+        </mat-card>
+    </form>
+</section>
